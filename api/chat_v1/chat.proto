@@ -1,0 +1,85 @@
+syntax = "proto3";
+
+package chat_v1;
+
+option go_package = "pkg/chat_v1;chat_v1";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+import "google/api/annotations.proto";
+
+service ChatV1 {
+  rpc ConnectUser(ConnectUserRequest) returns (stream Message){
+    option (google.api.http) = {
+      get: "/api/user/connect/{id}"
+    };
+  }
+
+  rpc SendMessage(SendMessageRequest) returns (google.protobuf.Empty){
+    option (google.api.http) = {
+      post: "/api/user/send-message"
+      body: "*"
+    };
+  }
+
+  rpc GetChatMessages(GetChatMessagesRequest) returns (GetChatMessagesResponse){
+    option (google.api.http) = {
+      get: "/api/user/get-messages/{id}"
+    };
+  }
+
+  rpc GetChats(GetChatsRequest) returns (GetChatsResponse){
+    option (google.api.http) = {
+      post: "/api/user/get-chats/{id}"
+    };
+  }
+}
+
+message Message {
+  int64 id = 1;
+  int64 id_author = 2;
+  int64 id_chat = 3;
+  string content = 4;
+  google.protobuf.Timestamp datetime = 5;
+}
+
+message Chat {
+  int64 id = 1;
+  bool is_local = 2;
+  User user = 3;
+  Message message = 4;
+}
+message User {
+  int64 id = 1;
+  string username = 2;
+  string full_name = 3;
+  string email = 4;
+  string avatar = 5;
+}
+
+message ConnectUserRequest {
+  int64 id = 1;
+}
+
+message SendMessageRequest {
+  Message message = 1;
+}
+
+
+message GetChatMessagesRequest {
+  int64 id = 1;  // id chat
+}
+
+message GetChatMessagesResponse {
+  repeated Message messages = 1;
+}
+
+
+
+message GetChatsRequest {
+  int64 id = 1;  // id user
+}
+
+message GetChatsResponse {
+  repeated Chat chats = 1;
+}

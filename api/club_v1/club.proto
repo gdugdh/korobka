@@ -1,0 +1,152 @@
+syntax = "proto3";
+
+package club_v1;
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/wrappers.proto";
+// import "google/protobuf/empty.proto";
+import "google/api/annotations.proto";
+
+option go_package = "pkg/club_v1;club_v1";
+
+service ClubV1 {
+  rpc ClubList(ClubListRequest) returns (ClubListResponse);
+
+  // MatchV1
+  rpc ActiveMatchList(MatchListRequest) returns (MatchListResponse) {
+    option (google.api.http) = {
+      get: "/api/match/{id}/active"
+    };
+  }
+  rpc FinishedMatchList(FinishedMatchListRequest) returns (FinishedMatchListResponse) {
+    option (google.api.http) = {
+      get: "/api/match/{id}/finished"
+    };
+  }
+  
+  rpc GetMatch(GetMatchRequest) returns (GetMatchResponse);
+
+  // UserV1
+  rpc FriendList(FriendListRequest) returns (FriendListResponse)  {
+    option (google.api.http) = {
+      get: "/api/user/{id}/friends"
+    };
+  }
+}
+
+message Club {
+  google.protobuf.Int64Value id = 1;
+  google.protobuf.Int64Value idCreator = 2;
+  google.protobuf.StringValue name = 3;
+  google.protobuf.StringValue image = 4;
+  google.protobuf.StringValue description = 5;
+}
+
+message ClubListRequest {
+  int64 idDiscipline = 1;
+}
+
+message ClubListResponse {
+  repeated Club clubs = 1;
+}
+
+// MatchV1
+
+// ActiveMatchList
+message Location {
+  int64 id = 1;
+  string name = 2;
+  string address = 3;
+  double latitude = 4;
+  double longitude = 5;
+}
+
+message Discipline {
+  int64 id = 1;
+  string name = 2;
+}
+
+message User {
+  int64 id = 1;
+  string username = 2;
+  string full_name = 3;
+  string email = 4;
+  string avatar = 5;
+}
+
+// message NullableSubData {
+//   oneof kind {
+//     google.protobuf.NullValue null = 1;
+//     SubData data = 2;
+//   }
+// }
+message Team {
+  int64 id = 1;
+  int64 id_match = 2;
+  Club club = 3;
+  int64 status = 4;
+  int64 count_player = 5;
+  int64 cur_count_player = 6;
+  repeated User players = 7; 
+}
+
+message Match {
+  int64 id = 1;
+  Location location = 2;
+  Discipline discipline = 3;
+  string description = 4;
+  google.protobuf.Timestamp datetime_start = 5;
+  google.protobuf.Timestamp datetime_end = 6;
+  repeated Team teams = 7;
+  int64 status = 8;
+}
+
+message MatchListRequest {
+  int64 id = 1;
+}
+
+message MatchListResponse {
+  repeated Match matches = 1;
+}
+
+// FinishedMatchList
+message FinishedMatchListRequest {
+  int64 id = 1;
+  // int64 count = 2;
+}
+
+message FinishedMatchListResponse {
+  repeated Match matches = 1;
+}
+
+// FinishedMatchList
+
+// message MatchDetail {
+//   int64 id = 1;
+//   Location location = 2;
+//   Discipline discipline = 3;
+//   string description = 4;
+//   google.protobuf.Timestamp datetime_start = 5;
+//   google.protobuf.Timestamp datetime_end = 6;
+//   int64 status = 7;
+//   Team team1 = 8;
+//   Team team2 = 9;
+// }
+
+message GetMatchRequest {
+  int64 id = 1;
+}
+
+message GetMatchResponse {
+  Match match = 1;
+}
+
+// UserV1
+
+message FriendListRequest {
+  int64 id = 1;
+}
+
+message FriendListResponse {
+  repeated User users = 1;
+}

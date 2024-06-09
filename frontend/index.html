@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="reset.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="header">
+        <div class="container header__container">
+            <div class="header__section">
+                <div class="header__logo">
+                    <img src="image/logo.png">
+                </div>
+            </div>
+            <div class="header__section">
+                <a href="#" class="header__link">Команды</a>
+                <a href="#" class="header__link">Залы</a>
+                <a href="#" class="header__link">Контакты</a>
+            </div>
+            <div class="header__section" style="width: 250px;"></div>
+            <div class="header__section header__user-section">
+                <a class="header__link">
+                    <img src="image/comment.svg" alt="">
+                </a>
+                <a class="header__link">
+                    <img src="image/Static.svg" alt="">
+                </a>
+                <a class="header__link">
+                    <img src="image/Ellipse.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container content__container">
+            <div class="sidebar">
+                <div class="content-block">
+                    <!-- Дисциплины -->
+                    <h3>Дисциплины</h3>
+                    <div class="discipline-list">
+                        <a class="discipline-item">
+                            <img src="image/add.svg">
+                            <p class="discipline-item__text">Создать игру</p>
+                        </a>
+                        <a discipline-id="1" class="discipline-item active">
+                            <img class="discipline-item__icon" src="image/ball.svg">
+                            <p class="discipline-item__text">Футбол</p>
+                            <img src="image/arrow.svg" class="discipline-item__arrow">
+                        </a>
+                        <a discipline-id="2" class="discipline-item">
+                            <img class="discipline-item__icon" src="image/volleyball-ball.svg">
+                            <p class="discipline-item__text">Волейбол</p>
+                            <img src="image/arrow.svg" class="discipline-item__arrow">
+                        </a>
+                        <a discipline-id="3" class="discipline-item">
+                            <img class="discipline-item__icon" src="image/basketball-ball.svg">
+                            <p class="discipline-item__text">Бакскетбол</p>
+                            <img src="image/arrow.svg" class="discipline-item__arrow">
+                        </a>
+                        <a discipline-id="4" class="discipline-item">
+                            <img class="discipline-item__icon" src="image/tennis-ball.svg">
+                            <p class="discipline-item__text">Теннис</p>
+                            <img src="image/arrow.svg" class="discipline-item__arrow">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mainbar">
+                <div class="content-block">
+                    
+                    <h3>Активные игры</h3>
+                    <div class="match-list">
+                        <div class="match-item">
+                            <p class="match-item__date">15 августа 2023, вторник. 21:00 МСК</p>
+                            <p class="match-item__decription">3-й квалификационный раунд. 1-й матч</p>
+                            <p>Регистрация игроков</p>
+                            <div class="teams">
+                                <div class="team">
+                                    <!-- <img style="width: 75px;" src="https://img.championat.com/team/logo/14680898161723744050.png" alt=""> -->
+                                    <p class="team__name">Динамо 3</p>
+                                    <p class="team__description">Загреб, Хорватия</p>
+                                </div>
+                                <div class="match-discipline">
+                                    <svg width="46" height="45" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.3905 8.2L18.0366 11.5167M13.3905 8.2L8.74452 11.5167M13.3905 8.2V4.6M18.0366 11.5167L16.262 16.8833M18.0366 11.5167L21.3288 10M8.74452 11.5167L10.5191 16.8833M8.74452 11.5167L5.4522 10M13.3905 4.6L9.26789 1.70091M13.3905 4.6L17.5132 1.70091M16.262 16.8833H10.5191M16.262 16.8833L18.2756 19.6M21.3288 10L25.5429 14.2M21.3288 10L22.5501 5.06253M10.5191 16.8833L8.50539 19.6M18.2756 19.6L23.9694 19M18.2756 19.6L15.2224 24.866M8.50539 19.6L2.81158 19M8.50539 19.6L11.5586 24.866M5.4522 10L1.23804 14.2M5.4522 10L4.23093 5.06253M25.6033 13C25.6033 19.6274 20.1354 25 13.3905 25C6.64557 25 1.17773 19.6274 1.17773 13C1.17773 6.37258 6.64557 1 13.3905 1C20.1354 1 25.6033 6.37258 25.6033 13Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div class="team">
+                                    <div class="team__container-count-user">
+                                        <img src="image/friends.svg">
+                                        <p>6/11</p>
+                                    </div>
+                                    <button class="team__button">
+                                        Присоединиться
+                                    </button>           
+                                </div>
+                            </div>
+                            <p>Стадион: Максимир (Загреб, Хорватия)</p>
+                        </div>
+                        <div class="match-item">
+                            <p class="match-item__date">15 августа 2023, вторник. 21:00 МСК</p>
+                            <p class="match-item__decription">3-й квалификационный раунд. 1-й матч</p>
+                            <p>Ожидается</p>
+                            <div class="teams">
+                                <div class="team">
+                                    <!-- <img style="width: 75px;" src="https://img.championat.com/team/logo/14680898161723744050.png" alt=""> -->
+                                    <p class="team__name">Динамо 3</p>
+                                    <p class="team__description">Загреб, Хорватия</p>
+                                </div>
+                                <div class="match-discipline">
+                                    <svg width="46" height="45" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.3905 8.2L18.0366 11.5167M13.3905 8.2L8.74452 11.5167M13.3905 8.2V4.6M18.0366 11.5167L16.262 16.8833M18.0366 11.5167L21.3288 10M8.74452 11.5167L10.5191 16.8833M8.74452 11.5167L5.4522 10M13.3905 4.6L9.26789 1.70091M13.3905 4.6L17.5132 1.70091M16.262 16.8833H10.5191M16.262 16.8833L18.2756 19.6M21.3288 10L25.5429 14.2M21.3288 10L22.5501 5.06253M10.5191 16.8833L8.50539 19.6M18.2756 19.6L23.9694 19M18.2756 19.6L15.2224 24.866M8.50539 19.6L2.81158 19M8.50539 19.6L11.5586 24.866M5.4522 10L1.23804 14.2M5.4522 10L4.23093 5.06253M25.6033 13C25.6033 19.6274 20.1354 25 13.3905 25C6.64557 25 1.17773 19.6274 1.17773 13C1.17773 6.37258 6.64557 1 13.3905 1C20.1354 1 25.6033 6.37258 25.6033 13Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div class="team">
+                                    <!-- <img style="width: 75px;" src="https://img.championat.com/team/logo/14694935731883662402.png" alt=""> -->
+                                    <p class="team__name">АЕК Афины</p>
+                                    <p class="team__description">Афины, Греция</p>                                
+                                </div>
+                            </div>
+                            <p>Стадион: Максимир (Загреб, Хорватия)</p>
+                        </div>
+                        <div class="match-item">
+                            <p class="match-item__date">15 августа 2023, вторник. 21:00 МСК</p>
+                            <p class="match-item__decription">3-й квалификационный раунд. 1-й матч</p>
+                            <p>Ожидается</p>
+                            <div class="teams">
+                                <div class="team">
+                                    <!-- <img style="width: 75px;" src="https://img.championat.com/team/logo/14680898161723744050.png" alt=""> -->
+                                    <p class="team__name">Динамо 3</p>
+                                    <p class="team__description">Загреб, Хорватия</p>
+                                </div>
+                                <div class="match-discipline">
+                                    <svg width="46" height="45" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.3905 8.2L18.0366 11.5167M13.3905 8.2L8.74452 11.5167M13.3905 8.2V4.6M18.0366 11.5167L16.262 16.8833M18.0366 11.5167L21.3288 10M8.74452 11.5167L10.5191 16.8833M8.74452 11.5167L5.4522 10M13.3905 4.6L9.26789 1.70091M13.3905 4.6L17.5132 1.70091M16.262 16.8833H10.5191M16.262 16.8833L18.2756 19.6M21.3288 10L25.5429 14.2M21.3288 10L22.5501 5.06253M10.5191 16.8833L8.50539 19.6M18.2756 19.6L23.9694 19M18.2756 19.6L15.2224 24.866M8.50539 19.6L2.81158 19M8.50539 19.6L11.5586 24.866M5.4522 10L1.23804 14.2M5.4522 10L4.23093 5.06253M25.6033 13C25.6033 19.6274 20.1354 25 13.3905 25C6.64557 25 1.17773 19.6274 1.17773 13C1.17773 6.37258 6.64557 1 13.3905 1C20.1354 1 25.6033 6.37258 25.6033 13Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div class="team">
+                                    <!-- <img style="width: 75px;" src="https://img.championat.com/team/logo/14694935731883662402.png" alt=""> -->
+                                    <p class="team__name">АЕК Афины</p>
+                                    <p class="team__description">Афины, Греция</p>                                
+                                </div>
+                            </div>
+                            <p>Стадион: Максимир (Загреб, Хорватия)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar">
+                <div class="content-block">
+                    <!-- Друзья -->
+                    <h3>Друзья</h3>
+
+                    <div class="friend-list">
+                        <div class="friend">
+                            <img class="friend__avatar" src="image/Ellipse.png">
+                            <div class="friend__data">
+                                <p class="friend__username">Mesi</p>
+                                <p class="friend__status">online</p>
+                            </div>
+                            <div class="friend__chat">
+                                <svg class="friend__chat-image" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.5 20.5V2.72222C0.5 1.49492 1.49492 0.5 2.72222 0.5H18.2778C19.5051 0.5 20.5 1.49492 20.5 2.72222V13.8333C20.5 15.0606 19.5051 16.0556 18.2778 16.0556H7.16667C6.6857 16.0547 6.21757 16.2107 5.83333 16.5L0.5 20.5ZM2.72222 2.72222V16.0556L5.09333 14.2778C5.47738 13.9881 5.94564 13.832 6.42667 13.8333H18.2778V2.72222H2.72222Z" fill="#C0C0C2"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-block">
+                    <!--История игр-->
+                    <h3>История игр</h3>
+                    <p style="margin: 5px;">Сыгранных матчей пока нет</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-chat">
+        <div class="popup-chat__header">
+            <div class="friend" style="background-color: #2f2f2f;">
+                <img class="friend__avatar" src="image/Ellipse.png">
+                <div class="friend__data">
+                    <p class="friend__username">Mesi</p>
+                    <p class="friend__status">online</p>
+                </div>
+            </div>
+        </div>
+        <div class="popup-chat__content">
+            <div class="message my-message">
+                HI
+            </div>
+            <div class="message friend-message">
+asdfjhlkasjdflkasjdflkasdjf
+            </div>
+        </div>
+        <div class="popup-chat__textbox">
+            <input type="text" placeholder="Введите текст">
+            <a onclick="sendMessage()" class="friend__chat">
+                <img src="image/comment.svg" alt="">
+            </a>
+        </div>
+    </div>
+
+    <script>
+        var chatContent = document.getElementsByClassName("popup-chat__content")[0];
+        var chatId = 1;
+
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+
+        function getUserId() {
+            return parseInt(getCookie("user-id"), 10);
+        }
+
+        var messages = [];
+
+        function StreamMessage() {
+            // Есть проблемы с соединением с gRPC сервером. Пока пусть будет данная заглушка
+            console.log("Stream ping");
+            fetch(`http://localhost:8081/api/user/get-messages/${chatId}`, {method: "GET"})
+            .then(response => response.json())
+            .then(data => {
+                var messagesIDs = []
+                for (const message of messages) {
+                    messagesIDs.push(message.id)
+                }
+                msgs = data["messages"];
+                for (const message of msgs) {
+                    if (!messagesIDs.includes(message.id)) {
+                        messages.push(message)
+                        addMessage(message);
+                    }
+                }
+                setTimeout(StreamMessage, 1000);
+            })
+        }
+
+        function LoadMessage() {
+            fetch(`http://localhost:8081/api/user/get-messages/${chatId}`, {method: "GET"})
+            .then(response => response.json())
+            .then(data => {
+                messages = data["messages"];
+                console.log(messages);
+                setTimeout(() => {PrintMessages(messages)}, 200);
+            })
+        }
+
+        function PrintMessages(messages) {
+            document.querySelector(".popup-chat__header > div >div > .friend__username").innerHTML = "Ivan";
+            chatContent.innerHTML = "";
+            for (message of messages) {
+                addMessage(message);
+            }
+            StreamMessage();
+        }
+
+        let scrollableDiv = document.querySelector('.popup-chat__content');
+        function scrollToBottom() {
+            scrollableDiv.scrollTop = scrollableDiv.scrollHeight;
+        }
+
+        function addMessage(message) {
+            if (message.idAuthor == getUserId() || message.id_author == getUserId()) {
+                chatContent.innerHTML += `<div class="message my-message">${message.content}</div>`
+            } else {
+                chatContent.innerHTML += `<div class="message friend-message">${message.content}</div>`
+            }
+
+            // Function to scroll to the bottom of the div
+            scrollToBottom();
+        }
+
+        function sendMessage() {
+            var content = document.querySelector(".popup-chat__textbox > input").value;
+            
+            fetch(`http://localhost:8081/api/user/send-message`, {
+                method: "POST", 
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                    'Content-Type': 'application/json;charset=utf-8',
+                    // 'Access-Control-Allow-Origin': '*',
+                    'User-Agent': 'PostmanRuntime/7.38.0',
+                    'Accept': '*/*',
+                    'Accept-Encoding': 'gzip, deflate, br',
+                    'Connection': 'keep-alive'
+                },
+                body: JSON.stringify({
+                    "message": {
+                        "id": 0,
+                        "id_author": getUserId(),
+                        "id_chat": chatId,
+                        "content": content,
+                        "datetime": "2024-06-03T00:00:00Z"
+                    }
+                })
+            })
+        }
+
+        // const eventSource = new EventSource("http://localhost:8081/api/user/connect/1");
+        // eventSource.onmessage = function (event) {
+        //     console.log(event)
+        // }
+        // fetch("http://localhost:8081/api/user/connect/1", {method: "GET"})
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         console.log(data)
+        //     })
+
+        // function SendMessage
+
+        var disciplines = [
+            // id, name, unactive, active
+            {'id': 1, 'name': 'Футбол', 'unactive': 'image/ball.svg', 'active': 'image/ball-active.svg'},
+            {'id': 2, 'name': 'Воллейбол', 'unactive': 'image/volleyball-ball.svg', 'active': 'image/volleyball-ball-active.svg'},
+            {'id': 3, 'name': 'Баскетбол', 'unactive': 'image/basketball-ball.svg', 'active': 'image/basketball-ball-active.svg'},
+            {'id': 4, 'name': 'Теннис', 'unactive': 'image/tennis-ball.svg', 'active': 'image/tennis-ball-active.svg'}
+        ]
+        var matches = [];
+        var friends = [];
+        var disciplineItems = document.querySelectorAll(".discipline-item[discipline-id]");
+        var choiceDisciplineId = 1;
+        var matchListNode = document.getElementsByClassName("match-list")[0];
+        var friendListNode = document.getElementsByClassName("friend-list")[0];
+        
+
+        choiceDiscipline(choiceDisciplineId);
+
+        function changeActiveDisciplineItem(disciplineId) {
+            for (const disciplineItem of disciplineItems) {
+                if (disciplineItem.getAttribute("discipline-id") == disciplineId) {
+                    disciplineItem.classList.add("active");
+                    disciplineItem.children[0].setAttribute("src", disciplines[parseInt(disciplineItem.getAttribute("discipline-id"), 10) - 1]["active"]);
+                    disciplineItem.children[2].setAttribute("src", "image/arrow-active.svg");
+                } else {
+                    disciplineItem.classList.remove("active");
+                    disciplineItem.children[0].setAttribute("src", disciplines[parseInt(disciplineItem.getAttribute("discipline-id"), 10) - 1]["unactive"]);
+                    disciplineItem.children[2].setAttribute("src", "image/arrow.svg");
+                }
+            }
+        }
+
+        function choiceDiscipline(disciplineId) {
+            changeActiveDisciplineItem(disciplineId);
+
+            fetch(`http://localhost:8081/api/match/${disciplineId}/active`, {method: "GET"})
+            .then(response => response.json())
+            .then(data => {
+                matches = data["matches"];
+                console.log(matches);
+                setTimeout(() => {PrintMatches(matches)}, 200);
+            })
+        }
+
+        for (const disciplineItem of disciplineItems) {
+            console.log("discipline-id:", disciplineItem.getAttribute("discipline-id"))
+            disciplineItem.addEventListener('click', (event) => {
+                var disciplineId = event.currentTarget.getAttribute("discipline-id");
+                choiceDiscipline(disciplineId)
+                choiceDisciplineId = parseInt(disciplineId, 10);
+            });
+        }
+
+        function PrintMatches(matches) {
+            matchListNode.innerHTML = ""
+            if (!matches|| !matches.length) {
+                matchListNode.innerHTML = "<p style=\"padding: 5px\">Активных матчей пока нет</p>"
+            } else {
+                for (const match of matches) {
+                    matchListNode.innerHTML += `
+                    <div class="match-item">
+                        <p class="match-item__date">${match.datetimeStart}</p>
+                        <p class="match-item__decription">${match.description}</p>
+                        <p>${getStatusString(match)}</p>
+                        <div class="teams">`
+                            +
+                            getTeamHTML(match.teams[0])
+                            +
+                            `<div class="match-discipline">
+                                <svg width="46" height="45" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.3905 8.2L18.0366 11.5167M13.3905 8.2L8.74452 11.5167M13.3905 8.2V4.6M18.0366 11.5167L16.262 16.8833M18.0366 11.5167L21.3288 10M8.74452 11.5167L10.5191 16.8833M8.74452 11.5167L5.4522 10M13.3905 4.6L9.26789 1.70091M13.3905 4.6L17.5132 1.70091M16.262 16.8833H10.5191M16.262 16.8833L18.2756 19.6M21.3288 10L25.5429 14.2M21.3288 10L22.5501 5.06253M10.5191 16.8833L8.50539 19.6M18.2756 19.6L23.9694 19M18.2756 19.6L15.2224 24.866M8.50539 19.6L2.81158 19M8.50539 19.6L11.5586 24.866M5.4522 10L1.23804 14.2M5.4522 10L4.23093 5.06253M25.6033 13C25.6033 19.6274 20.1354 25 13.3905 25C6.64557 25 1.17773 19.6274 1.17773 13C1.17773 6.37258 6.64557 1 13.3905 1C20.1354 1 25.6033 6.37258 25.6033 13Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>`
+                            +
+                            getTeamHTML(match.teams[1])
+                            +
+                            `
+                        </div>
+                        <p>${match.location.address}</p>
+                    </div>
+                    `;
+                }
+            }
+        }
+
+        function getStatusString(match) {
+            if (match.teams[0].club.id == 0 || match.teams[1].club.id == 0) {
+                return "Ведется набор игроков";
+            } else return "Ожидается";
+        }
+
+        function getTeamHTML(team) {
+            var teamHtml = "";
+            if (team.club.id != 0) {
+                teamHtml = `
+                <div class="team">
+                    <p class="team__name">${team.club.name}</p>
+                    <p class="team__description">${team.club.description}</p>
+                </div>`
+            } else {
+                teamHtml = `
+                <div class="team">
+                    <div class="team__container-count-user">
+                        <img src="image/friends.svg">
+                        <p>${team.curCountPlayer}/${team.countPlayer}</p>
+                    </div>
+                    <button class="team__button">
+                        Присоединиться
+                    </button>           
+                </div>`;
+            }
+            return teamHtml;
+        }
+
+        fetch(`http://localhost:8081/api/user/${getUserId()}/friends`, {method: "GET"})
+            .then(response => response.json())
+            .then(data => {
+                friends = data["users"];
+                console.log(matches);
+                PrintFriends(friends);
+            })
+
+        function PrintFriends(friends) {
+            friendListNode.innerHTML = "";
+            for (const friend of friends) {
+                friendListNode.innerHTML += `<div class="friend">
+                    <img class="friend__avatar" src="image/Ellipse.png">
+                    <div class="friend__data">
+                        <p class="friend__username">${friend.username}</p>
+                        <p class="friend__status">online</p>
+                    </div>
+                    <a class="friend__chat" onclick="OpenChat(${friend.id})">
+                        <svg class="friend__chat-image" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.5 20.5V2.72222C0.5 1.49492 1.49492 0.5 2.72222 0.5H18.2778C19.5051 0.5 20.5 1.49492 20.5 2.72222V13.8333C20.5 15.0606 19.5051 16.0556 18.2778 16.0556H7.16667C6.6857 16.0547 6.21757 16.2107 5.83333 16.5L0.5 20.5ZM2.72222 2.72222V16.0556L5.09333 14.2778C5.47738 13.9881 5.94564 13.832 6.42667 13.8333H18.2778V2.72222H2.72222Z" fill="#C0C0C2"/>
+                        </svg>
+                    </a>
+                </div>`;
+            }
+        }
+
+        function OpenChat(friendId) {
+            LoadMessage();
+        }
+    </script>
+</body>
+</html>
