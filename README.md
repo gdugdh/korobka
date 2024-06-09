@@ -9,12 +9,3 @@
 4. в /internal/service/service.go добавить interface с методами, которую буду вызываться в 3 шаге
 5. Создать в /internal/service/API_NAME/service.go со всеми методами бизнес-логики
     - Все методы здесь
-
-### ПЛАН
-
-1. Создать
-    ```protobuf
-    rpc ActiveMatchList(MatchListRequest) returns (MatchListResponse);
-    rpc FinishedMatchList(UserMatchListRequest) returns (UserMatchListResponse);
-    rpc FriendList(FriendListRequest) returns (FriendListResponse);
-    ```
