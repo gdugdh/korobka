@@ -1,0 +1,336 @@
+body{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #fff;
+}
+
+a {
+    color: #888;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.header {
+    font-size: 20px;
+    height: 100px;
+    background-color: #181818;
+    display: fixed;
+    top: 0;
+    left: 0;
+    font-weight: 500;
+    color: #888;
+}
+
+.header__link {
+    padding: 0 15px;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+
+.header__user-section {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    background-color: #1f1f1f;
+}
+
+
+/* content */
+.content {
+    padding-top: 10px;
+}
+
+.content h3 {
+    font-weight: 600;
+    font-size: 20px;
+    margin: 5px 5px 15px 5px;
+}
+
+.content__container {
+    display: flex;
+    height: 100%;
+    align-items: flex-start;
+}
+
+.sidebar {
+    flex: 1;
+}
+
+.mainbar {
+    flex: 2;
+    margin: 0 10px;
+}
+
+.content-block {
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* DISCIPLINE */
+.discipline-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.discipline-item {
+    display: flex;
+    align-items: center;
+    padding: 9px 10px;
+    font-size: 16px;
+    font-weight: medium;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #181818;
+}
+
+.discipline-item.active { 
+    background-color: #BDE420;
+}
+
+.discipline-item img {
+    color: #fff;
+}
+
+.discipline-item__icon {
+    width: 26px;
+}
+
+.discipline-item__text {
+    margin-left: 15px;
+    margin-right: auto;
+}
+
+.discipline-item.active {
+    color: #1f1f1f;
+}
+
+/* MATCHES */
+.match-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.match-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #181818;
+    padding: 10px;
+}
+
+.match-item__date {
+    margin-bottom: 7px;
+}
+
+.match-item__decription {
+    margin-bottom: 7px;
+    color: #94999F;
+    font-size: 12px;
+}
+
+.teams {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px 40px 15px 40px;
+    min-width: 400px;
+}
+
+.team {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    text-align: center;
+}
+
+.team__name {
+    margin: 7px 0;
+    font-size: 16px;
+}
+
+.team__description {
+    font-size: 12px;
+    color: #94999F;
+}
+
+.team__container-count-user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.team__container-count-user img {
+    margin-right: 10px;
+}
+
+.team__button {
+    background-color: #181818;
+    color: #fff;
+    border-radius: 5px;
+    padding: 11px 16px;
+    font-size: 14px;
+    text-decoration: none;
+    border: none;
+    transition: background-color .4s;
+}
+
+.team__button:hover {
+    background-color: #BDE420;
+    color: #1F1F1F;
+}
+
+.match-discipline {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* FRIEND */
+.friend-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.friend {
+    display: flex;
+    align-items: center;
+    padding: 9px 10px;
+    font-size: 16px;
+    font-weight: medium;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #181818;
+    padding: 10px;
+}
+
+.friend__avatar {
+    width: 35px;
+    margin-right: 15px;
+}
+
+.friend__data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 30px;
+    flex: 1;
+}
+
+.friend__username {
+    font-size: 14px;
+}
+
+.friend__status {
+    font-size: 10px;
+    color: #21DF34; /* #6F6F6F */
+}
+
+.friend__chat {
+    border-radius: 5px;
+    padding: 5px;
+    transition: background-color .4s;
+    cursor: pointer;
+}
+
+.friend__chat:hover {
+    background-color: #181818;
+}
+
+/* POPUP CHAT */
+.popup-chat {
+    background-color: #181818;
+    border-top-left-radius:5px ;
+    border-top-right-radius:5px ;
+    position: fixed;
+    right: 50px;
+    bottom: 0;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    resize: none;
+}
+
+.popup-chat__header {
+    background-color: #2F2F2F;
+    border-top-left-radius:5px ;
+    border-top-right-radius:5px ;
+}
+
+.popup-chat__content {
+    flex: 1;
+}
+
+.popup-chat__textbox {
+    padding: 7px 13px;
+    background-color: #2F2F2F;
+}
+
+.popup-chat__textbox>input {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+}
+
+.popup-chat__textbox>a {
+    border-radius: 5px;
+    padding: 5px;
+    transition: background-color .4s;
+    cursor: pointer;
+}
+
+.popup-chat__textbox>a:hover {
+    background-color: #181818;
+}
+
+.popup-chat__content {
+    display: flex;
+    flex-direction: column;
+    /* resize: none; */
+    overflow-y: scroll;
+}
+
+.message {
+    background-color: #2F2F2F;
+    padding: 10px;
+    font-size: 12px;
+    border-top-left-radius:5px ;
+    border-top-right-radius:5px ;
+    display: inline;
+    margin: 5px 10px;
+}
+
+.my-message {
+    border-bottom-left-radius: 5px;
+    align-self: flex-end;
+}
+
+.friend-message {
+    border-bottom-right-radius: 5px;
+    align-self: flex-start;
+}

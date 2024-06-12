@@ -80,6 +80,7 @@ func run() error {
 		Handler: allowCORS(mux),
 	}
 
+	log.Println("HTTP Proxy server is running on localhost:8081")
 	return s.ListenAndServe()
 	// Start HTTP server (and proxy calls to gRPC server endpoint)
 	// return http.ListenAndServe(":8081", mux)

@@ -409,6 +409,12 @@ func (x *User) GetAvatar() string {
 	return ""
 }
 
+//	message NullableSubData {
+//	  oneof kind {
+//	    google.protobuf.NullValue null = 1;
+//	    SubData data = 2;
+//	  }
+//	}
 type Team struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
