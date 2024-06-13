@@ -54,3 +54,5 @@ generate-http-chat-api:
 	api/chat_v1/chat.proto
 	cp pkg/chat_v1/api/chat_v1/chat.pb.gw.go pkg/chat_v1/
 	rm -rf pkg/chat_v1/api
+build:
+	go build -o bin/korobka .
